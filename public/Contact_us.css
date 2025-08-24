@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #d3d3d3;
+    background-color: #1a1a1a;
+    padding-top: 80px;
+    min-height: 100vh;
+}
+
+.first {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ff6200;
+    padding: 15px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: clamp(20px, 4vw, 25px);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #000;
+}
+
+.logo img {
+    width: clamp(30px, 6vw, 40px);
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    gap: clamp(15px, 3vw, 30px);
+    font-size: clamp(14px, 2.5vw, 17px);
+}
+
+.nav a, .nav p {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav p:hover, .nav a:hover {
+    color: #000;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    text-align: center;
+    padding: clamp(20px, 5vw, 30px);
+    background-color: transparent;
+    margin-bottom: clamp(20px, 4vw, 40px);
+    font-size: clamp(16px, 3vw, 20px);
+    color: #fff;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(15px, 3vw, 20px) clamp(20px, 5vw, 40px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(20px, 3vw, 30px);
+}
+
+.about-website {
+    flex: 1;
+    background: #2a2a2a;
+    color: #d3d3d3;
+    padding: clamp(20px, 4vw, 30px);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 0;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 3vw, 30px);
+    min-width: 0;
+}
+
+.contact-info, .contact-form {
+    background: #2a2a2a;
+    color: #d3d3d3;
+    padding: clamp(15px, 3vw, 25px);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+
+.about-website:hover, .contact-info:hover, .contact-form:hover {
+    transform: scale(1.02); 
+}
+
+/* Icon Container (replacing previous addition) */
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: linear-gradient(90deg, rgba(135, 206, 235, 0.2), rgba(30, 144, 255, 0.2)); /* Subtle sky gradient */
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Plane Icon (replacing previous addition) */
+.plane-icon {
+    width: clamp(50px, 10vw, 80px); /* Slightly larger for better visibility */
+    height: auto;
+    filter: brightness(0) invert(1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.5)); /* White icon with a glow */
+    transition: transform 0.3s ease;
+    animation: soar 3s ease-in-out infinite; /* Smooth flying motion */
+}
+
+/* Flying animation for the plane icon */
+@keyframes soar {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(3deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+/* Hover effect for the plane icon */
+.plane-icon:hover {
+    transform: scale(1.2) rotate(5deg); /* Zoom and tilt on hover */
+}
+
+/* Add a subtle wind effect in the background of the container */
+.icon-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    top: 50%;
+    left: -100%;
+    animation: wind 4s infinite linear;
+}
+
+/* Wind animation */
+@keyframes wind {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+.contact-info h2, .contact-form h2, .about-website h2 {
+    color: #ff6200;
+    margin-bottom: clamp(10px, 2vw, 15px);
+    font-size: clamp(18px, 3vw, 24px);
+}
+
+.contact-info p {
+    margin: clamp(5px, 1vw, 10px) 0;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+.contact-form label {
+    display: block;
+    margin: clamp(10px, 2vw, 15px) 0 5px;
+    color: #d3d3d3;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: clamp(8px, 1.5vw, 10px);
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-size: clamp(14px, 2vw, 16px);
+    background-color: #333;
+    color: #d3d3d3;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: clamp(80px, 15vw, 100px);
+}
+
+
+#name {
+    background-color: #3a3a3a; 
+    border: 1px solid #ff6200; 
+    color: #ff6200; 
+}
+
+
+#email {
+    background-color: #3a3a3a; 
+    border: 1px solid #66b0ff;
+    color: #66b0ff;
+}
+
+
+#message {
+    background-color: #3a3a3a;
+    border: 1px solid #d3d3d3;
+    color: #d3d3d3; 
+}
+
+
+
+.contact-form button {
+    background-color: #ff6200;
+    color: #fff;
+    padding: clamp(10px, 2vw, 12px) clamp(15px, 3vw, 25px);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: clamp(10px, 2vw, 15px);
+    transition: background-color 0.3s ease;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+.contact-form button:hover {
+    background-color: #e65b00;
+}
+
+
+.cta-button {
+    display: inline-block;
+    background-color: #ff6200;
+    color: #fff;
+    padding: clamp(8px, 1.5vw, 10px) clamp(15px, 3vw, 20px);
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: clamp(14px, 2vw, 16px);
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e65b00;
+}
+
+.about-website ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.about-website li {
+    font-size: clamp(14px, 2vw, 16px);
+    color: #d3d3d3;
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: clamp(10px, 2vw, 15px);
+    background-color: #ff6200;
+    width: 100%;
+    font-size: clamp(12px, 2vw, 14px);
+    color: #fff;
+}
+
+
+@media (max-width: 1024px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .about-website, .right-section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .first {
+        flex-direction: column;
+        padding: 10px 15px;
+        position: relative;
+    }
+
+    .nav {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+
+    body {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 18px;
+    }
+
+    .logo img {
+        width: 25px;
+    }
+
+    .nav {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .contact-info p,
+    .contact-form label,
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .contact-info h2,
+    .contact-form h2,
+    .about-website h2 {
+        font-size: 18px;
+    }
+}

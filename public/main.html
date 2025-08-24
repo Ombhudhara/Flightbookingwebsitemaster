@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travela</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <img class="one" src="Group.png" alt="" />
+  <main>
+    <section class="first">
+      <div class="logo">
+        <img src="flight-ticket.png" alt="" />Travela&trade;
+      </div>
+      <div class="nav">
+        <a href="main.html"><p>Home</p></a>
+        <a href="Services.html"><p>Services</p></a>
+        <a href="about_us.html"><p>About Us</p></a>
+        <a href="Contact_us.html"><p>Contact Us</p></a>
+      </div>
+      <div class="login" id="auth-section">
+        <select id="countrySelect">
+          <option value="">Country</option>
+        </select>
+        <a href="login.html" id="loginLink"><button class="btn-1" id="loginBtn">Login</button></a>
+        <a href="sign_up.html" id="signupLink"><button class="btn-2" id="signupBtn">Sign Up</button></a>
+      </div>
+    </section>
+    <div class="box">
+      <div class="txt-1">
+        It's A Big World Out There, Go Explore!
+        <svg width="308" height="31" viewBox="0 0 308 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M6.31348 22.81C71.7032 9.17555 136.619 5.59836 162.28 5.59839C189.211 5.59842 162.423 17.203 152.322 21.2281C149.984 22.1597 147.563 22.9409 145.132 23.5937C116.245 31.3518 194.382 6.11751 301.778 20.0264"
+            stroke="#F76641" stroke-width="11.1496" stroke-linecap="round" />
+        </svg>
+      </div>
+      <div class="txt-2">
+        We're here to make your travel dreams a reality. Our intuitive search
+        engine scours thousands of flights to bring you the best deals
+        tailored to your preferences and budget.
+        <img src="Screenshot 2025-02-04 235142.png" alt="" />
+      </div>
+      <div class="book">
+        <div class="dest">
+          <div class="input1">From :-</div>
+          <div class="inp">
+            <input type="text" id="input1" onkeyup="searchAirports('input1', 'airportDropdown1')" class="rounded-lg p-1" placeholder="            Enter your Departure City" />
+            <select id="airportDropdown1" size="2" onchange="selectAirport('input1', 'airportDropdown1')"></select>
+          </div>
+          <button onclick="swapFields()" type="button">
+            <img src="refresh-arrow_930876.png" alt="">
+          </button>
+          <div class="input2">To :-</div>
+          <div class="inp">
+            <input type="text" id="input2" onkeyup="searchAirports('input2', 'airportDropdown2')" class="rounded-lg p-1" placeholder="                Enter your Arrival City" />
+            <select id="airportDropdown2" size="2" onchange="selectAirport('input2', 'airportDropdown2')"></select>
+          </div>
+        </div>
+        <div class="date">
+          <p>Departure Date :- <input type="date" name="dep" /></p>
+          <p>Arrival Date :- <input type="date" name="arr" /></p>
+        </div>
+        <div class="tic">
+          <p>
+            Number of Tickets :-
+            <input type="number" name="tic" placeholder="Enter the number of Tickets" />
+          </p>
+          <p>
+            Type of Ticket :-
+            <select id="ticket_type" name="ticket_type" required>
+              <option value="">Select Your Ticket Type</option>
+              <option value="economy">Economy Class</option>
+              <option value="business">Business Class</option>
+              <option value="first_class">First Class</option>
+            </select>
+          </p>
+        </div>
+        <button id="btn">Search Flights</button>
+      </div>
+      <div id="flights-container" style="display: none;"></div>
+      <div class="text">
+        <div class="data">Popular Tour Types</div>
+        <div class="detail">
+          The most popular tour packages presented to you, explore diverse
+          destinations
+        </div>
+      </div>
+      <div class="tours">
+        <div class="adv"><img src="parachute (1) 1.png" alt="" />Adventure</div>
+        <div class="city"><img src="skyline 1.png" alt="" />City Tour</div>
+        <div class="cruse"><img src="cruise 1.png" alt="" />Cruses Tour</div>
+        <div class="sea"><img src="wave 1.png" alt="" />Sea Tour</div>
+        <div class="travel"><img src="travel (1) 1.png" alt="" />Travel</div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="main">
+      <div class="cu">
+        <h2>Contact Us</h2>
+        <div class="border"></div>
+        <p>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="86f2f4e7f0e3eae7c6e1ebe7efeaa8e5e9eb">[email&#160;protected]</a></p>
+        <p>Phone: +91 99009 88008</p>
+        <p>Address: S.G. Highway, Adalaj Circle, Ahmedabad</p>
+      </div>
+      <div class="cu">
+        <h2>Quick Links</h2>
+        <div class="border"></div>
+        <p>Services</p>
+        <p>About Us</p>
+        <p>Contact Us</p>
+      </div>
+      <div class="cu">
+        <h2>Social Media</h2>
+        <div class="border"></div>
+        <div class="svg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="white">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M6.18182 10.3333C5.20406 10.3333 5 10.5252 5 11.4444V13.1111C5 14.0304 5.20406 14.2222 6.18182 14.2222H8.54545V20.8889C8.54545 21.8081 8.74951 22 9.72727 22H12.0909C13.0687 22 13.2727 21.8081 13.2727 20.8889V14.2222H15.9267C16.6683 14.2222 16.8594 14.0867 17.0631 13.4164L17.5696 11.7497C17.9185 10.6014 17.7035 10.3333 16.4332 10.3333H13.2727V7.55556C13.2727 6.94191 13.8018 6.44444 14.4545 6.44444H17.8182C18.7959 6.44444 19 6.25259 19 5.33333V3.11111C19 2.19185 18.7959 2 17.8182 2H14.4545C11.191 2 8.54545 4.48731 8.54545 7.55556V10.3333H6.18182Z"
+              stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="white">
+            <path
+              d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
+              stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+            <path
+              d="M16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51472 16.5 7.5 14.4853 7.5 12C7.5 9.51472 9.51472 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12Z"
+              stroke="currentColor" stroke-width="1.5" />
+            <path d="M17.5078 6.5L17.4988 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="white">
+            <path d="M10 20.5675C6.57143 21.7248 3.71429 20.5675 2 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M10 22V18.7579C10 18.1596 10.1839 17.6396 10.4804 17.1699C10.6838 16.8476 10.5445 16.3904 10.1771 16.2894C7.13394 15.4528 5 14.1077 5 9.64606C5 8.48611 5.38005 7.39556 6.04811 6.4464C6.21437 6.21018 6.29749 6.09208 6.31748 5.9851C6.33746 5.87813 6.30272 5.73852 6.23322 5.45932C5.95038 4.32292 5.96871 3.11619 6.39322 2.02823C6.39322 2.02823 7.27042 1.74242 9.26698 2.98969C9.72282 3.27447 9.95075 3.41686 10.1515 3.44871C10.3522 3.48056 10.6206 3.41384 11.1573 3.28041C11.8913 3.09795 12.6476 3 13.5 3C14.3524 3 15.1087 3.09795 15.8427 3.28041C16.3794 3.41384 16.6478 3.48056 16.8485 3.44871C17.0493 3.41686 17.2772 3.27447 17.733 2.98969C19.7296 1.74242 20.6068 2.02823 20.6068 2.02823C21.0313 3.11619 21.0496 4.32292 20.7668 5.45932C20.6973 5.73852 20.6625 5.87813 20.6825 5.9851C20.7025 6.09207 20.7856 6.21019 20.9519 6.4464C21.6199 7.39556 22 8.48611 22 9.64606C22 14.1077 19.8661 15.4528 16.8229 16.2894C16.4555 16.3904 16.3162 16.8476 16.5196 17.1699C16.8161 17.6396 17 18.1596 17 18.7579V22"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <p id="rights">&copy; 2025 Travela. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,655 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+*{
+    margin: 0px;
+    padding:0px;
+    background-color: #fffbe3;
+}
+body .one{
+    width:100vw;
+    position: fixed !important;
+    bottom: 0px;
+    position: absolute;
+}
+.box img{
+    width:100%;
+    border-radius: 10px;
+    position: relative;
+}
+body .box {
+    background: url("Frame\ 3.png") center no-repeat;
+    background-position: top;
+    top: 0px;
+    height: 120vh;
+    width: 83%;
+    border: 10px solid black;
+    border-radius: 20px;
+    margin-left: 8%;
+    position: absolute;
+    background-color: white;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns:  700px 50px 395px 115px;
+  
+}
+.box .txt-1{
+    background-color: transparent;
+    grid-column: 1/2;
+    grid-template-rows: 100px;
+    font-family:"Inter","sans-serif";
+    margin: 100px;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 50px;
+}
+.box .txt-1 svg{
+    background-color: transparent;
+    width: 295px;
+    height:49px;
+    margin-left: 138px;
+}
+.box .txt-2{
+    grid-column: 3/4;
+    background-color: transparent;
+    margin-top: 110px;
+    font-family:"Inter","sans-serif";
+    margin-top: 50px;
+}
+.box .txt-2 img{
+    width:290px;
+    margin-top: 20px;
+    background-color: transparent;
+}
+.first {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; 
+    display: grid;
+    grid-template-columns: 130px 208px 205px 377px 128px 278px;
+    font-family: "Inter","sans-serif";
+    align-items: center;
+    padding: 10px 20px; 
+    z-index: 1000;
+    background-color: transparent;
+    background-color: #fffbe3;
+}
+
+
+.first .nav{
+    margin-left: 10px;
+    display: flex;
+    gap:25px;
+    font-size: 17px;
+    background-color: transparent;
+    grid-column: 4/5;
+}
+.first .nav p:hover{
+    color: #F76641;
+    font-weight: bold;
+    text-shadow: black;
+    text-shadow: 1px 1px 2px #000, -1px -1px 2px #F76641;
+    transition: 0.2s;
+    cursor: pointer; 
+}
+
+.first .login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    background-color: transparent;
+    grid-column: 6/7;
+}
+.first .login select{
+    width:85px;
+}
+.first .login select:hover{
+    transition: 0.2s;
+    transform: scale(1.01);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.first .nav p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2px;
+    background-color: transparent;
+}
+.first .nav p svg{
+    width: 20px;
+    background-color: transparent;
+}
+.first .logo{
+    font-weight:bold;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    background-color: transparent;
+    grid-column:2/3;
+}
+
+.first .logo img{
+    width:40px;
+    background-color: transparent;
+
+}
+.first .login .btn-1{
+    background-color: black;
+    color:#F76641;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 18px;
+    font-family: "Inter","sans-serif";
+    font-size: 15px;
+    box-shadow: 0 0 10px rgba(2, 2, 2, 0.7);
+} 
+.first .login .btn-1:hover{
+    color:black;
+    background-color: #F76641;
+    transition: 0.2s;
+    transform: scale(1.05);
+    font-weight: bold;
+    box-shadow: #000 ;
+    cursor: pointer;
+}
+.first .login .btn-2{
+    background-color: #F76641;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 18px;
+    font-family: "Inter","sans-serif";
+    font-size: 15px;
+    box-shadow: 0 0 10px rgba(2, 2, 2, 0.7);
+}
+.first .login .btn-2:hover{
+    color:#F76641;
+    background-color: black;
+    transition: 0.2s;
+    transform: scale(1.05);
+    font-weight: bold;
+    box-shadow: #000 ;
+    cursor: pointer;
+}
+.first .login p{
+    background-color: transparent;
+    font-size: 17px;
+    font-style: "Inter","sans-serif";
+}
+.first .login p:hover{
+    color: black;
+    text-shadow: black;
+    text-shadow: 2px 2px 4px #000;
+    transition: 0.2s;
+    font-weight: 500;
+    cursor: pointer;
+}
+.box .book .dest .input1{
+    color:#F76641;
+    font-family:"Inter","sans-serif";
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+    text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000; 
+}
+.box .book .dest .input2{
+    color:#F76641;
+    font-family:"Inter","sans-serif";
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+    text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000; 
+}
+.box .book .dest .inp{
+    background-color: transparent;
+    position: relative;
+}
+.box .book .dest .inp select{
+    width: 300px;
+    background-color: transparent;
+    -webkit-appearance: none; /* Chrome, Safari */
+            -moz-appearance: none;    /* Firefox */
+            appearance: none;         /* Standard */
+            overflow-y: auto;         /* Allow scrolling if needed */
+            scrollbar-width: none;
+    position: absolute;
+}
+
+.box .book .dest input{
+    background-color: #fffbe3;
+    color:black ;
+    border-radius: 50px;
+    border: none;
+    height: 30px;
+    width: 300px;
+    padding: 10px
+}
+.box .book .date p{
+    color:#F76641;
+    font-family:"Inter","sans-serif";
+    font-size: 22px;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+    text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000; 
+}
+.box .book .date input{
+    background-color: #fffbe3;
+    border-radius: 50px;
+    color: #000;
+    font-weight: 200;
+    font-size: 17px;
+    border: none;
+    height: 30px;
+    width: 135px;
+    padding-left: 10px;
+}
+.box .book .date{
+        display: grid;
+        margin: 30px;
+        grid-template-columns: 545px 375px;
+        background-color: transparent;
+        margin-left: 75px;
+        align-items: center;
+}
+.box .book .date #dep{
+    grid-column: 1/2;
+}
+.box .book .date #departure_date{
+    grid-column: 2/3;
+}
+.box .book .tic{
+    display: grid;
+        margin: 30px;
+        grid-template-columns: 545px 445px;
+        background-color: transparent;
+        margin-left: 75px;
+        align-items: center;
+}
+.box .book .tic p{
+    color:#F76641;
+    font-family:"Inter","sans-serif";
+    font-size: 22px;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+    text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000; 
+}
+.box .book .tic input{
+    background-color: #fffbe3;
+    border-radius: 50px;
+    color: #000;
+    font-weight: 300;
+    font-size: 17px;
+    border: none;
+    height: 30px;
+    width: 250px;
+    padding-left: 10px;
+}
+.box .book .tic select{
+    background-color: #fffbe3;
+    border-radius: 50px;
+    color: #000;
+    font-weight: 200;
+    font-size: 17px;
+    border: none;
+    height: 30px;
+    width: 220px;
+    padding-left: 10px;
+}
+.box .book #btn{
+    background-color: transparent;
+    margin-left: 31vw;
+    margin-top: 0px;
+    border-radius: 50px;
+    background-color: #F76641;
+    cursor: pointer;
+    font-family:"Inter","sans-serif";
+    width: 9vw;
+    font-size: 18px;
+    height: 5vh;
+    border: none;
+    box-shadow: 10 10 10px #F76641(2, 2, 2, 0.7); 
+}
+.box .book #btn:hover{
+    background-color: black;
+    color:#F76641;
+    border: none;
+    transition: 0.2s;
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 6px 6px 15px black(0, 0, 0, 0.5);
+}
+.box .book{
+    grid-row: 2/3;
+    grid-column: 1/5;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin:0 100px;
+    height: 38vh;
+    border-radius: 20px;
+    margin-top:-30px;
+    box-shadow: 0 10px 20px #737373;
+    position: relative;
+}
+.box .book .dest{
+    display: grid;
+    margin: 30px;
+    grid-template-columns: 90px 350px 105px 57px 395px;
+    background-color: transparent;
+    margin-left: 75px;
+    align-items: center;
+}
+.box .book .dest button{
+    background-color: transparent;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+}
+
+.box .book .dest button img{
+    background-color: transparent;
+}
+
+.box .book .dest button:hover{
+    transition: 0.2s;
+    transform: scale(1.10);
+    color: black;
+    box-shadow: #000 ;
+}
+.box .text {
+    background-color: transparent;
+    text-align: center;
+    grid-column: 1/4;
+    margin-left: 150px;
+    font-family: "Inter", "sans-serif";
+    position: relative;
+    z-index: 1;
+  }
+.box .text .data{
+    background-color: transparent;
+    font-size: 36px;
+    font-weight: bold;
+}
+.box .text .detail{
+    background-color: transparent;
+    font-size: 17px;
+    color: #737373;
+    margin-top: 15px;
+}
+.box .tours{
+    display: flex;
+    gap: 20px;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+    grid-column: 1/5;
+    position: sticky;
+}
+.box .tours .adv{
+    height: 135px;
+    width: 205px;
+    background-color: transparent;
+    border: 2px solid #bababa;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    flex-direction: column;
+    font-size: 19px;
+    font-family: "Inter","sans-serif";
+    gap: 10px;
+    font-weight: 400;
+    border-radius: 20px;
+}
+.box .tours .adv:hover {
+    color: #F76641;
+    transform: scale(1.05);
+    transition: 0.2s;
+    border: 2px solid transparent; 
+    border-image: linear-gradient(180deg, #F76641, white) 1;
+}
+
+
+.box .tours .city{
+    height: 135px;
+    width: 205px;
+    background-color: transparent;
+    border: 2px solid #bababa;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    flex-direction: column;
+    font-size: 19px;
+    font-family: "Inter","sans-serif";
+    gap: 10px;
+    font-weight: 400;
+    border-radius: 20px;
+}
+.box .tours .city:hover {
+    color: #F76641;
+    transform: scale(1.05);
+    transition: 0.2s;
+    border: 2px solid transparent; 
+    border-image: linear-gradient(180deg, #F76641, white) 1; 
+}
+.box .tours .cruse{
+    height: 135px;
+    width: 205px;
+    background-color: transparent;
+    border: 2px solid #bababa;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    flex-direction: column;
+    font-size: 19px;
+    font-family: "Inter","sans-serif";
+    gap: 10px;
+    font-weight: 400;
+    border-radius: 20px;
+}
+.box .tours .cruse:hover {
+    color: #F76641;
+    transform: scale(1.05);
+    transition: 0.2s;
+    border: 2px solid transparent; 
+    border-image: linear-gradient(180deg, #F76641, white) 1; 
+}
+.box .tours .sea{
+    height: 135px;
+    width: 205px;
+    background-color: transparent;
+    border: 2px solid #bababa;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    flex-direction: column;
+    font-size: 19px;
+    font-family: "Inter","sans-serif";
+    gap: 10px;
+    font-weight: 400;
+    border-radius: 20px;
+}
+.box .tours .sea:hover {
+    color: #F76641;
+    transform: scale(1.05);
+    transition: 0.2s;
+    border: 2px solid transparent; 
+    border-image: linear-gradient(180deg, #F76641, white) 1; 
+}
+.box .tours .travel{
+    height: 135px;
+    width: 205px;
+    background-color: transparent;
+    border: 2px solid #bababa;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    flex-direction: column;
+    font-size: 19px;
+    font-family: "Inter","sans-serif";
+    gap: 10px;
+    font-weight: 400;
+    border-radius: 20px;
+}
+.box .tours .travel:hover {
+    color: #F76641;
+    transform: scale(1.05);
+    transition: 0.2s;
+    border: 2px solid transparent; 
+    border-image: linear-gradient(180deg, #F76641, white) 1; 
+}
+.tours img{
+    background-color: transparent;
+    height: 49px;
+    width: 49px;
+}
+footer{
+    height: 30vh;
+    background-color: black;
+    width: 100%;
+    margin-top: 140vh;
+    position: relative;
+    color: white;
+}
+footer .main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #000;
+}
+footer .main .cu h2{
+    background-color: #000;
+    color:#F76641;
+    font-family: "Inter","sans-serif";
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+footer .main .cu p{
+    background-color: #000;
+    color: white;
+    font-family: "Inter","sans-serif";
+    font-size: 1rem;
+    margin-top: 5px;
+}
+footer .main .cu .svg{
+    display: flex;
+    background-color: #000;
+    gap: 10px;
+}
+
+footer .main .cu .svg svg{
+    background-color: #000;
+    margin-top: 5px;
+}
+footer .main .cu{
+    background-color: #000;
+}
+#rights{
+    margin-top: 40px;
+}
+
+#flights-container {
+    background-color: #fffbe3;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-family: "Inter", sans-serif;
+    width: 80%;
+    max-width: 1000px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    top: 450px;
+    margin-top: 20px;
+  }
+  
+  #flight-select {
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid #bababa;
+    width: 80%;
+    background-color: #fffbe3;
+    font-family: "Inter", sans-serif;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  #flight-select option {
+    background-color: #fffbe3;
+    color: black;
+    padding: 8px;
+  }
+  
+  #flights-container h3 {
+    background-color: #fffbe3;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: "Inter", sans-serif;
+    color: black;
+  }
+  
+  #book-now-btn {
+    background-color: #F76641;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    padding: 8px 25px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #book-now-btn:hover {
+    background-color: black;
+    color: #F76641;
+    transform: scale(1.05);
+    transition: 0.2s;
+  }
+
+
+
+/* User authentication styles */
+.user-id {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: #f5f5f5;
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .user-id:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path fill="%23F76641" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
