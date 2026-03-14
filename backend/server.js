@@ -44,7 +44,7 @@ app.use(cors({
 
 // Middleware
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../frontend')));
 
 // MongoDB connection
 mongoose.connect('mongodb://localhost:27017/flightBookingDB')
