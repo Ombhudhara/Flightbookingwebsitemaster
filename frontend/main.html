@@ -48,16 +48,16 @@
         <div class="dest">
           <div class="input1">From :-</div>
           <div class="inp">
-            <input type="text" id="input1" onkeyup="searchAirports('input1', 'airportDropdown1')" class="rounded-lg p-1" placeholder="            Enter your Departure City" />
-            <select id="airportDropdown1" size="2" onchange="selectAirport('input1', 'airportDropdown1')"></select>
+            <input type="text" id="input1" class="rounded-lg p-1" placeholder="            Enter your Departure City" />
+            <select id="airportDropdown1" size="2"></select>
           </div>
-          <button onclick="swapFields()" type="button">
+          <button id="swap-btn" type="button">
             <img src="refresh-arrow_930876.png" alt="">
           </button>
           <div class="input2">To :-</div>
           <div class="inp">
-            <input type="text" id="input2" onkeyup="searchAirports('input2', 'airportDropdown2')" class="rounded-lg p-1" placeholder="                Enter your Arrival City" />
-            <select id="airportDropdown2" size="2" onchange="selectAirport('input2', 'airportDropdown2')"></select>
+            <input type="text" id="input2" class="rounded-lg p-1" placeholder="                Enter your Arrival City" />
+            <select id="airportDropdown2" size="2"></select>
           </div>
         </div>
         <div class="date">

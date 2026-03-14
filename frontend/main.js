@@ -369,6 +369,26 @@ document.addEventListener('DOMContentLoaded', async function() {
     searchButton.removeEventListener('click', handleSearchFlights); // Prevent duplicate listeners
     searchButton.addEventListener('click', handleSearchFlights);
   }
+
+  // Add event listeners for swap button and inputs
+  const swapBtn = document.getElementById('swap-btn');
+  if (swapBtn) {
+    swapBtn.addEventListener('click', swapFields);
+  }
+
+  const input1 = document.getElementById('input1');
+  const dropdown1 = document.getElementById('airportDropdown1');
+  if (input1 && dropdown1) {
+    input1.addEventListener('keyup', () => searchAirports('input1', 'airportDropdown1'));
+    dropdown1.addEventListener('change', () => selectAirport('input1', 'airportDropdown1'));
+  }
+
+  const input2 = document.getElementById('input2');
+  const dropdown2 = document.getElementById('airportDropdown2');
+  if (input2 && dropdown2) {
+    input2.addEventListener('keyup', () => searchAirports('input2', 'airportDropdown2'));
+    dropdown2.addEventListener('change', () => selectAirport('input2', 'airportDropdown2'));
+  }
 });
 
 function handleSuccessfulLogin(userData) {

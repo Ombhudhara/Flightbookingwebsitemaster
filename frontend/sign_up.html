@@ -5,36 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flight Booking - Sign Up</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            background: linear-gradient(135deg, #f97316, #f59e0b);
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .sign-up-form {
-            background-color: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(10px);
-            border-radius: 8px;
-            padding: 2rem;
-            width: 100%;
-            max-width: 400px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        }
-        .error-message {
-            color: #ef4444;
-            font-size: 0.875rem;
-            margin-top: 0.5rem;
-        }
-        .success-message {
-            color: #10b981;
-            font-size: 0.875rem;
-            margin-top: 0.5rem;
-        }
-    </style>
+    <link rel="stylesheet" href="sign_up.css" />
 </head>
 <body>
     <div class="sign-up-form">
@@ -52,52 +23,6 @@
         </form>
     </div>
 
-    <script>
-        document.getElementById("sign-up-form").addEventListener("submit", function(e) {
-            e.preventDefault();
-            
-            const messageContainer = document.getElementById("message-container");
-            messageContainer.innerHTML = ""; // Clear previous messages
-            
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
-            const confirmPassword = document.getElementById("confirm_password").value;
-
-            if (!name || !email || !password || !confirmPassword) {
-                messageContainer.innerHTML = '<p class="error-message">Please fill out all fields.</p>';
-                return;
-            }
-
-            if (password !== confirmPassword) {
-                messageContainer.innerHTML = '<p class="error-message">Passwords do not match.</p>';
-                return;
-            }
-
-            // Call the backend API (updated to port 3002)
-            fetch('http://localhost:3002/api/signup', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ name, email, password }),
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    messageContainer.innerHTML = `<p class="success-message">${data.message}</p>`;
-                    setTimeout(() => {
-                        window.location.href = "login.html";
-                    }, 1500);
-                } else {
-                    messageContainer.innerHTML = `<p class="error-message">${data.message}</p>`;
-                }
-            })
-            .catch(error => {
-                messageContainer.innerHTML = '<p class="error-message">Error connecting to server. Please try again.</p>';
-                console.error('Error:', error);
-            });
-        });
-    </script>
+    <script src="sign_up.js"></script>
 </body>
 </html>
